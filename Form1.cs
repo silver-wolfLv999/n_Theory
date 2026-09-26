@@ -36,7 +36,7 @@ namespace n_Theory
 				{
 					int x = e.X- size / 2 - center.X;
 					int y = e.Y- size / 2 - center.Y;
-					double temp =(2 * Math.PI / 360) * i *(360 / number);
+					double temp =2 * Math.PI  * i / number;
 					int new_x = (int)(x * Math.Cos(temp) - y * Math.Sin(temp));
 					int new_y = (int)(x * Math.Sin(temp) + y * Math.Cos(temp));
 					new_x += center.X;
