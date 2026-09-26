@@ -9,7 +9,8 @@ namespace n_Theory
 		int number = 0;
 		double xx, yy;
 		Color color = Color.Red;
-		public Form1()
+        Color new_color = Color.Red;
+        public Form1()
 		{
 			InitializeComponent();
 		}
@@ -19,6 +20,7 @@ namespace n_Theory
 			this.Width = 800;
 			this.Height = 600;
 			label1.Text = "size = " + size.ToString();
+			label2.Text = "number = " + number.ToString();
         }
 
 
@@ -81,8 +83,12 @@ namespace n_Theory
 				case Keys.Space:
                     g.Clear(this.BackColor);
 					break;
+                case Keys.A:
+                    colorDialog1.ShowDialog();
+                    new_color = colorDialog1.Color;
+                    break;
             }
-            
+
         }
 
 	}
