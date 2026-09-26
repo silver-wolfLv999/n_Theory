@@ -59,12 +59,14 @@ namespace n_Theory
 			switch (e.KeyData)
 			{
 				case Keys.Add:
-						number += 1;
-					break;
+					number += 1;
+					label2.Text = "number = " + number.ToString();
+                    break;
 				case Keys.Subtract:
                     number -= 1;
                     if (number <= 0)
                         number = 0;
+                    label2.Text = "number = " + number.ToString();
                     break;
 				case Keys.C:
 					colorDialog1.ShowDialog();
